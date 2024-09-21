@@ -1,0 +1,47 @@
+.mainPart {
+  @media (min-width: 1024px) {
+    flex-basis: 33%;
+    // min-height: 100vh;
+  }
+
+  &__content {
+    background: linear-gradient(-45deg, #ffffff, #6d6da53d, #ffffff);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    padding: 8px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.26);
+  }
+
+  .userTitle {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .userImage {
+    &__image {
+      border-radius: 50%;
+      position: relative;
+      width: 175px;
+      height: 175px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
