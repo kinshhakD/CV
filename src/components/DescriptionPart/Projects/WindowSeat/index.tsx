@@ -1,9 +1,15 @@
 import { NextjsIcon } from "@/components/Icons/NextjsIcon";
 import { Project, ProjectProps } from "../Project";
 import { TypescriptIcon } from "@/components/Icons/TypescriptIcon";
+import { animation } from "@/utils/animation";
 
 export const WindowSeat = () => (
-  <Project name="WindowSeat" stack={stack} description={description} />
+  <Project
+    animation={animation(0, 1.75, "right")}
+    name="WindowSeat"
+    stack={stack}
+    description={description}
+  />
 );
 
 const description = `Developed user management functionality and integrated paid content, including subscription processing and

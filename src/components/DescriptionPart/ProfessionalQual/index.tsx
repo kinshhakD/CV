@@ -1,8 +1,9 @@
+import { animation } from "@/utils/animation";
 import clsx from "clsx";
-
+import { motion } from "framer-motion";
 export const ProfessionalQual = () => {
   return (
-    <div>
+    <motion.article {...animation(0, 1, "left")}>
       <h3 className={clsx("font-bold text-3xl mb-2")}>
         Professional Qualities:
       </h3>
@@ -18,6 +19,6 @@ export const ProfessionalQual = () => {
         Vue.js, complementing my skill set in working with various frameworks
         and libraries.
       </p>
-    </div>
+    </motion.article>
   );
 };

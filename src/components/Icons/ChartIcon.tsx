@@ -11,7 +11,7 @@ export const ChartIcon: FC<IconProps> = (attributes) => (
     width="192px"
     height="192px"
     viewBox="0 0 192 192"
-    enable-background="new 0 0 192 192"
+    enableBackground="new 0 0 192 192"
     {...attributes}
   >
     <path

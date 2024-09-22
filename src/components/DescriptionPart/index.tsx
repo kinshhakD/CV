@@ -11,7 +11,18 @@ import { Education } from "./Education";
 
 export const DescriptionPart = () => {
   return (
-    <motion.section className={styles.descriptionPart}>
+    <motion.section
+      initial={{
+        x: 20,
+        opacity: 0,
+      }}
+      animate={{
+        x: 0,
+        opacity: 1,
+      }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+      className={styles.descriptionPart}
+    >
       <CareerSummary />
       <Divider className="my-5" />
       <ProfessionalQual />

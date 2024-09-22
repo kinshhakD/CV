@@ -12,7 +12,8 @@ import { ChartIcon } from "@/components/Icons/ChartIcon";
 import { Divider } from "@chakra-ui/react";
 import { WebpackIcon } from "@/components/Icons/WebpackIcon";
 import { Contacts } from "../Contacts";
-
+import { motion } from "framer-motion";
+import { animation } from "@/utils/animation";
 export const TechStack = () => {
   return (
     <div>
@@ -20,20 +21,25 @@ export const TechStack = () => {
         Tech Stack:
       </h3>
       <ul className={clsx("flex flex-col gap-2")}>
-        {frameworksStack.map((framework) => (
-          <li key={framework.name} className={clsx("flex items-center gap-3")}>
+        {frameworksStack.map((framework, idx) => (
+          <motion.li
+            {...animation(0, 0.75, idx % 2 === 0 ? "left" : "right")}
+            key={framework.name}
+            className={clsx("flex items-center gap-3")}
+          >
             {framework.icon}
             <span className={clsx("italic font-semibold text-xl")}>
               {framework.name}
             </span>
-          </li>
+          </motion.li>
         ))}
       </ul>
       <Divider className={clsx(styles.divider)} />
       <ul>
         <ul className={clsx("flex flex-col gap-2")}>
-          {librariesStack.map((framework) => (
-            <li
+          {librariesStack.map((framework, idx) => (
+            <motion.li
+              {...animation(0, 1.25, idx % 2 === 0 ? "left" : "right")}
               key={framework.name}
               className={clsx("flex items-center gap-3")}
             >
@@ -41,29 +47,34 @@ export const TechStack = () => {
               <span className={clsx("italic font-semibold text-xl")}>
                 {framework.name}
               </span>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </ul>
       <Divider className={clsx(styles.divider)} />
       <h5 className="font-bold text-center text-2xl italic">Professional:</h5>
       <ul className={clsx("flex flex-col gap-2")}>
-        {professional.map((prof) => (
-          <li className={clsx("italic font-semibold text-xl")} key={prof}>
+        {professional.map((prof, idx) => (
+          <motion.li
+            {...animation(0, 1.5, idx % 2 === 0 ? "left" : "right")}
+            className={clsx("italic font-semibold text-xl")}
+            key={prof}
+          >
             {prof}
-          </li>
+          </motion.li>
         ))}
       </ul>
       <Divider className={clsx(styles.divider)} />
       <h5 className="font-bold text-center text-2xl italic">Language:</h5>
       <ul className={clsx("flex flex-col gap-2")}>
-        {languages.map((language) => (
-          <li
+        {languages.map((language, idx) => (
+          <motion.li
+            {...animation(0, 2, idx % 2 === 0 ? "left" : "right")}
             key={language.name}
             className={clsx("italic font-semibold text-xl")}
           >
             {`${language.name} - ${language.value}`}
-          </li>
+          </motion.li>
         ))}
       </ul>
       <Divider className={styles.divider} />

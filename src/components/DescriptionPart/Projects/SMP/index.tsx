@@ -4,9 +4,11 @@ import { ReactIcon } from "@/components/Icons/ReactIcon";
 import { ReduxIcon } from "@/components/Icons/ReduxIcon";
 import { AntDesignIcon } from "@/components/Icons/AntDesignIcon";
 import { ChartIcon } from "@/components/Icons/ChartIcon";
+import { animation } from "@/utils/animation";
 
 export const SMP = () => (
   <Project
+    animation={animation(0, 1.75, "left")}
     stack={stack}
     name="Sports Model Project"
     description={description}

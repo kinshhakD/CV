@@ -1,8 +1,9 @@
+import { animation } from "@/utils/animation";
 import clsx from "clsx";
-
+import { motion } from "framer-motion";
 export const Highlights = () => {
   return (
-    <div>
+    <motion.article {...animation(0, 1.5, "right")}>
       <h3 className={clsx("font-bold text-3xl mb-2")}>Highlights:</h3>
       <p className="font-medium">
         Commitment to Excellence: Always eager to learn new technologies and
@@ -15,6 +16,6 @@ export const Highlights = () => {
         continue evolving in the field of Front-end development, implementing
         innovative approaches and delivering interfaces of outstanding quality
       </p>
-    </div>
+    </motion.article>
   );
 };

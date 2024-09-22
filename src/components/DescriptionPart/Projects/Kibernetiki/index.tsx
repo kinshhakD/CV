@@ -4,9 +4,17 @@ import { NextjsIcon } from "@/components/Icons/NextjsIcon";
 import { ReduxIcon } from "@/components/Icons/ReduxIcon";
 import { AntDesignIcon } from "@/components/Icons/AntDesignIcon";
 import { TypescriptIcon } from "@/components/Icons/TypescriptIcon";
+import { animation } from "@/utils/animation";
 
 export const Kibernetiki = () => {
-  return <Project description={description} name="Kibernetiki" stack={stack} />;
+  return (
+    <Project
+      animation={animation(0, 1.75, "left")}
+      description={description}
+      name="Kibernetiki"
+      stack={stack}
+    />
+  );
 };
 
 const description = `SEO Optimization: Implemented robust SEO practices to ensure maximum visibility and ranking on search engines,

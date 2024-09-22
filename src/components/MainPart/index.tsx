@@ -8,7 +8,18 @@ import { TechStack } from "./TechStack";
 
 export const MainPart = () => {
   return (
-    <motion.section className={clsx(styles.mainPart)}>
+    <motion.section
+      initial={{
+        x: -20,
+        opacity: 0,
+      }}
+      animate={{
+        x: 0,
+        opacity: 1,
+      }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+      className={clsx(styles.mainPart)}
+    >
       <div className={styles.mainPart__content}>
         <h1 className={clsx("text-center mb-3", styles.userTitle)}>
           Danylo Kinshchak

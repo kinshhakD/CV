@@ -2,9 +2,15 @@ import { VueIcon } from "@/components/Icons/VueIcon";
 import { Project, ProjectProps } from "../Project";
 import { ChartIcon } from "@/components/Icons/ChartIcon";
 import { TypescriptIcon } from "@/components/Icons/TypescriptIcon";
+import { animation } from "@/utils/animation";
 
 export const Reporter = () => (
-  <Project name="Time Reporter" description={description} stack={stack} />
+  <Project
+    animation={animation(0, 1.75, "right")}
+    name="Time Reporter"
+    description={description}
+    stack={stack}
+  />
 );
 
 const description = `An application that collects statistics from different services and
